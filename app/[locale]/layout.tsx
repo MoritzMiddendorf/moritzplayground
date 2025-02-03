@@ -19,11 +19,14 @@ export function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-  params: { locale }
+  params
 }: {
   children: React.ReactNode
   params: { locale: string }
 }) {
+  // Await the entire params object first
+  const resolvedParams = await params;
+  const locale = resolvedParams.locale;
   if (!locales.includes(locale as any)) {
     notFound();
   }
