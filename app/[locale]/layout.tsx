@@ -40,7 +40,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="h-full">
-      <body className={`${inter.className} min-h-screen bg-lavender-50`}>
+      <body className={`${inter.className} min-h-screen bg-lavender-200`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex flex-col min-h-screen">
             <header className="bg-lavender-100 p-4">
@@ -58,7 +58,7 @@ export default async function RootLayout({
                 </div>
               </nav>
             </header>
-            <main className="flex-grow container mx-auto px-4">
+            <main className="flex-grow container mx-auto px-4" >
               {children}
             </main>
           </div>
