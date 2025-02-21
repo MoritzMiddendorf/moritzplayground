@@ -5,8 +5,12 @@
     "exploreButton": "Explore",
     "privacyPolicy": "Privacy Policy",
     "imprint": "Imprint",
-    "allRightsReserved": "All rights reserved.",
-    "Test": "Test123"
+    "allRightsReserved": "All rights reserved."
+  },
+  "Auth": {
+    "signOut": "Sign Out",
+    "signInWithGoogle": "Sign In with Google",
+    "welcome": "Welcome, {email}"
   }
 }
 

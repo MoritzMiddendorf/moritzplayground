@@ -5,8 +5,11 @@
     "exploreButton": "Entdecken",
     "privacyPolicy": "Datenschutzerklärung",
     "imprint": "Impressum",
-    "allRightsReserved": "Alle Rechte vorbehalten.",
-    "Test": "Test:"
+    "allRightsReserved": "Alle Rechte vorbehalten."
+  },
+  "Auth": {
+    "signOut": "Abmelden",
+    "signInWithGoogle": "Mit Google anmelden"
   }
 }
 

@@ -1,13 +1,10 @@
-import type { NextConfig } from "next";
+const withNextIntl = require("next-intl/plugin")("./app/i18n.ts")
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  webpack: (config) => {
+    return config
+  },
+}
 
-const withNextIntl = require('next-intl/plugin')('./app/i18n.ts');
-
-module.exports = withNextIntl({
-  // Other Next.js config options...
-});
-
-export default nextConfig;
+module.exports = withNextIntl(nextConfig)
