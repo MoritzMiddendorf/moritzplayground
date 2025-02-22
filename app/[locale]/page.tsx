@@ -20,6 +20,6 @@ export const metadata: Metadata = {
 export default function Home() {
   const t = useTranslations('Index');
 
-  return <SharedContent t={t} siteName={siteConfig.name} subprojects={subprojects} />;
+  return <SharedContent siteName={siteConfig.name} subprojects={subprojects} />;
 }
 

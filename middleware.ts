@@ -1,14 +1,8 @@
-import { locales, defaultLocale } from './app/config';
 import createMiddleware from 'next-intl/middleware';
+import {routing} from './i18n/routing';
 
-// Infer the type of Locale from the locales array
-type Locale = typeof locales[number];
-
-export default createMiddleware({
-  locales,
-  defaultLocale
-});
+export default createMiddleware(routing);
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
+  matcher: ['/', '/(de|en)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)']
 };

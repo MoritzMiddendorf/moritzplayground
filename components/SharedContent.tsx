@@ -1,5 +1,8 @@
 "use client"
 
+// Replace local import with the correct global CSS import:
+// import "./globals.css"
+import "@/app/globals.css"
 import type React from "react"
 import Link from "next/link"
 import { Auth } from "@/components/Auth"
@@ -14,6 +17,7 @@ const SharedContent: React.FC<SharedContentProps> = ({siteName, subprojects }) =
   const t = useTranslations("Index")
 
   return (
+    
     <div className="min-h-screen flex flex-col bg-lavender-50">
       <div className="container mx-auto px-4 py-8 bg-lavender-50 flex-grow flex flex-col">
         <Auth />

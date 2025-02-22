@@ -6,6 +6,9 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}'
   ],
+  corePlugins: {
+    preflight: false,
+  },
   theme: {
     container: {
       center: true,
@@ -79,6 +82,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/postcss')()],
+  plugins: [
+  ],
 }
 

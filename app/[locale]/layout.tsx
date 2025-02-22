@@ -5,10 +5,8 @@ import { locales } from "../config"
 import Link from "next/link"
 import { AuthProvider } from "@/contexts/AuthContext"
 import type React from "react"
-
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }))
-}
+import {routing} from '@/i18n/routing';
+import {getMessages} from 'next-intl/server';
 
 export default async function LocaleLayout({
   children,
@@ -17,18 +15,18 @@ export default async function LocaleLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  // Await the entire params object first
   const resolvedParams = await params;
   const locale = resolvedParams.locale;
+ // Ensure that the incoming `locale` is valid
+ if (!routing.locales.includes(locale as any)) {
+  notFound();
+}
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
 
   if (!locales.includes(locale as any)) {
-    notFound()
-  }
-
-  let messages
-  try {
-    messages = (await import(`../locales/${locale}.json`)).default
-  } catch (error) {
     notFound()
   }
 

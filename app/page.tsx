@@ -15,20 +15,11 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  type TranslationKeys = 'welcome' | 'explore' | 'exploreButton' | 'allRightsReserved' | 'privacyPolicy' | 'imprint';
-
-  const t = (key: TranslationKeys, params?: Record<string, any>) => {
-    const translations: Record<TranslationKeys, string> = {
-      welcome: `Welcome to ${params?.name}'s Multi-Project Platform`,
-      explore: 'Explore our projects',
-      exploreButton: 'Explore',
-      allRightsReserved: 'All rights reserved.',
-      privacyPolicy: 'Privacy Policy',
-      imprint: 'Imprint'
-    };
-    return translations[key];
-  };
-
-  return <SharedContent t={t} siteName={siteConfig.name} subprojects={subprojects} />;
+  return (
+    <SharedContent
+      siteName={siteConfig.name}
+      subprojects={subprojects}
+    />
+  );
 }
 
