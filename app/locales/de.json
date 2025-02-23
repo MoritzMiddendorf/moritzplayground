@@ -9,7 +9,8 @@
   },
   "Auth": {
     "signOut": "Abmelden",
-    "signInWithGoogle": "Mit Google anmelden"
+    "signInWithGoogle": "Mit Google anmelden",
+    "welcome": "Hallo, {email}"
   }
 }
 
